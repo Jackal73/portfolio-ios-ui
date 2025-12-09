@@ -47,7 +47,7 @@ const WindowWrapper = (Component, windowKey) => {
     );
   };
 
-  Wrapped.displayName = `WindowWrapper(${Component.displayName || Component.name || "Component"}`;
+  Wrapped.displayName = `WindowWrapper(${Component.displayName || Component.name || "Component"})`;
 
   return Wrapped;
 };
