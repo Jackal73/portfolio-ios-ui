@@ -14,7 +14,7 @@ const renderText = (text, className, baseWeight = 400) => {
       className={className}
       style={{ fontVariationSettings: `'wght' ${baseWeight}` }}
     >
-      {char === "" ? "\u00A0" : char}
+      {char === " " ? "\u00A0" : char}
     </span>
   ));
 };
@@ -25,13 +25,12 @@ const setupTextHover = (container, type) => {
   const letters = container.querySelectorAll("span");
   const { min, max, default: base } = FONT_WEIGHTS[type];
 
-  const animateLetter = (letter, weight, duration = 0.25) => {
-    return gsap.to(letter, {
+  const animateLetter = (letter, weight, duration = 0.25) =>
+    gsap.to(letter, {
       duration,
       ease: "power2.out",
       fontVariationSettings: `'wght' ${weight}`,
     });
-  };
 
   const handleMouseMove = (e) => {
     const { left } = container.getBoundingClientRect();
@@ -46,13 +45,13 @@ const setupTextHover = (container, type) => {
     });
   };
 
-  // const handleMouseLeave = () =>
-  //     letters.forEach((letter) => {
-  //       letters.forEach((letter) => animateLetter(letter, base, 0.3));
-  //     });
-
   const handleMouseLeave = () =>
+    // letters.forEach((letter) => {
     letters.forEach((letter) => animateLetter(letter, base, 0.3));
+  // });
+
+  // const handleMouseLeave = () =>
+  //   letters.forEach((letter) => animateLetter(letter, base, 0.3));
 
   container.addEventListener("mousemove", handleMouseMove);
   container.addEventListener("mouseleave", handleMouseLeave);
