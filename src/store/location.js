@@ -4,9 +4,6 @@ import { locations } from "#constants";
 
 const DEFAULT_LOCATION = locations.work;
 
-// const { create } = require("zustand");
-// const { immer } = require("zustand/middleware/immer");
-
 const useLocationStore = create(
   immer((set) => ({
     activeLocation: DEFAULT_LOCATION,
