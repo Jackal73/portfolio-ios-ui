@@ -31,14 +31,6 @@ const useWindowStore = create(
       set((state) => {
         const win = state.windows[windowKey];
         win.zIndex = state.nextZIndex++;
-
-        // if (!state.windows[windowKey]) {
-        //   console.error(`Invalid windowKey: ${windowKey}`);
-        //   return;
-        // }
-        // const win = state.windows[windowKey];
-        // win.zIndex = state.nextZIndex;
-        // state.nextZIndex++;
       }),
   }))
 );
