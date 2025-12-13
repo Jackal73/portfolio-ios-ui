@@ -132,14 +132,14 @@ const socials = [
     text: "Github",
     icon: "/icons/github.svg",
     bg: "#f4656b",
-    link: "https://github.com/JavaScript-Mastery-Pro",
+    link: "https://github.com/Jackal73",
   },
   {
     id: 2,
     text: "Platform",
     icon: "/icons/atom.svg",
     bg: "#4bcb63",
-    link: "https://jsmastery.com/",
+    link: "https://kdldesigners.com/",
   },
   {
     id: 3,
